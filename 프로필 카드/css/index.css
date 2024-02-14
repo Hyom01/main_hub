@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'YClover-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/YClover-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root{
+    --profil-color1: rgb(135, 206, 250);
+    --profil-color2: rgb(158, 240, 188);
+    --profil-color3:  rgb(255, 189, 242);
+    --profil-color4: rgb(231, 189, 255);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'YClover-Bold';
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    width: 340px;
+    padding: 30px;
+    background-color: white;
+    margin: 50px auto;
+    box-shadow: 10px 10px 30px rgba(211, 211, 211, 0.4); /*수정*/
+    border-radius: 3%;
+
+    nav.menu{
+        width: 100%;
+
+       a{
+            font-size: 20px;
+            color: gray;
+        }
+        
+        a:nth-of-type(1){
+            float: left;
+        }
+        
+        a:nth-of-type(2){
+            float: right;
+        }
+    }
+
+    nav.menu::after{
+        content: " ";
+        display: block;
+        clear: both;
+    }
+    
+    article.profile{
+        width: 100%;
+        text-align: center;
+
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 5px 3px 4px rgba(211, 211, 211, 0.5);
+        }
+
+        h1{
+            font-weight: bold;
+            font-size: 20pt;
+            line-height: 1;
+            color: darkgray;
+            margin-bottom: 1%;
+        }
+
+        h2{
+            font-weight: normal;
+            font-size: 15px;
+            color: grey;
+            margin-bottom: 30px;
+        }
+    }
+
+    a.btn-v{
+        display: block;
+        width: 180px;
+        height: 37px;
+        margin: 0px auto;
+        background-color: #468fea;
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 15px;
+        color: white;
+        line-height: 36px;
+        text-align: center;
+        box-shadow: 5px 3px 4px rgba(88, 101, 242, 0.4) ;
+    }
+    
+    ul.contact{
+        margin-bottom: 25px;
+
+        li{
+            width: 100%;
+            padding-top: 7%;
+            padding-left: 9%;
+            padding-bottom: 4%;
+            border-bottom: 1px solid lightgray;
+
+            i{
+                width: 20%;
+                text-align: center;
+                color: darkgray;
+                font-size: 15pt;
+            }
+
+            span{
+                font-weight: normal;
+                font-size: 10pt;
+                color: darkgray;
+            }
+        }
+
+        li:last-child{
+            border-bottom: none;
+        }
+    }
+
+    nav.others{
+        width: 100%;
+        text-align: center;
+
+        a{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 10px;
+            opacity: 0.4;
+        }
+
+        a.on{
+            opacity: 1;
+        }
+
+        a:nth-of-type(1){
+            background-color: var(--profil-color1);
+            box-shadow: 5px 3px 4px rgba(var(--profil-color1), 0.4) ;
+        }
+
+        a:nth-of-type(2){
+            background-color: var(--profil-color2);
+            box-shadow: 5px 3px 4px rgba(var(--profil-color2), 0.4) ;
+        }
+
+        a:nth-of-type(3){
+            background-color: var(--profil-color3);
+            box-shadow: 5px 3px 4px rgba(var(--profil-color3), 0.4) ;
+        }
+
+        a:nth-of-type(4){
+            background-color: var(--profil-color4);
+            box-shadow: 5px 3px 4px rgba(var(--profil-color4), 0.4) ;
+        }
+    }
+}
+
+
+#m1{
+    background-color: var(--profil-color1);
+    section a.btn-v{
+        background-color: var(--profil-color1);
+    }
+}
+#m2{
+    background-color: var(--profil-color2);
+    section a.btn-v{
+        background-color: var(--profil-color2);
+    }
+}
+#m3{
+    background-color: var(--profil-color3);
+    section a.btn-v{
+        background-color: var(--profil-color3);
+    }
+}
+#m4{
+    background-color: var(--profil-color4);
+    section a.btn-v{
+        background-color: var(--profil-color4);
+    }
+}

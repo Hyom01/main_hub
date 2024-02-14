@@ -1,0 +1,77 @@
+:root {
+    --profile-member1-color: 53, 224, 247;
+    --profile-member2-color: 85, 245, 205;
+    --profile-member3-color: 255, 128, 223;
+    --profile-member4-color: 167, 148, 253;
+    --profile-main-color: #fff;
+    --profile-font-color: #777;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--profile-font-color);
+}
+
+body.member1 {
+    --profile-main-color: var(--profile-member1-color);
+}
+
+body.member2 {
+    --profile-main-color: var(--profile-member2-color);
+}
+
+body.member3 {
+    --profile-main-color: var(--profile-member3-color);
+}
+
+body.member4 {
+    --profile-main-color: var(--profile-member4-color);
+}
+
+body {
+    background-color: rgba(var(--profile-main-color), 0.3);
+}
+
+.wrap {
+    width: 350px;
+    box-shadow: 10px 10px 30px #00000025;
+}
+
+.btn-view {
+    background: linear-gradient(45deg, rgba(var(--profile-main-color), 0.3), rgb(var(--profile-main-color)));
+}
+
+.others>a {
+    width: 25px;
+    height: 25px;
+}
+
+.others>a:nth-child(1) {
+    background-color: rgb(var(--profile-member1-color));
+    box-shadow: 2px 2px 5px rgb(var(--profile-member1-color));
+}
+
+.others>a:nth-child(2) {
+    background-color: rgb(var(--profile-member2-color));
+    box-shadow: 2px 2px 5px rgb(var(--profile-member2-color));
+}
+
+.others>a:nth-child(3) {
+    background-color: rgb(var(--profile-member3-color));
+    box-shadow: 2px 2px 5px rgb(var(--profile-member3-color));
+}
+
+.others>a:nth-child(4) {
+    background-color: rgb(var(--profile-member4-color));
+    box-shadow: 2px 2px 5px rgb(var(--profile-member4-color));
+}
+
+.others>a:hover {
+    box-shadow: none;
+    border: 2px solid #777;
+}
+
+.off {
+    opacity: 0.3;
+}
