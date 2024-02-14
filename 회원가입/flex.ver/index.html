@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex.ver</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <nav class="menu">
+                <ul class="menu-left">
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">PRODUCT</a></li>
+                    <li><a href="">SERVICE</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="menu menu-center">
+                <img src="./logo/cat.png" alt="로고 이미지">
+            </div>
+        
+            <nav class="menu">
+                <ul class="menu-right">
+                    <li><a href="">login</a></li>
+                    <li><a href="">join</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="container">
+                <h1>회원가입 양식</h1>
+                <form>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th class="required">이름</th>
+                                <td>
+                                    <input type="text" name="user_name" id="user_name" required>
+                                   
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">아이디</th>
+                                <td>
+                                    <input type="text" name="user_id" id="user_id" required>
+                                    <button type="button" name="check_user_id" class="check">중복 확인</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">비밀번호</th>
+                                <td>
+                                    <input type="password" name="user_pw" id="user_pw" required>
+                                    <span class="message">
+                                        ※ 비밀 번호는<span class="red">문자 숫자, 특수문자(~!@#$%^&*)의 조합 10 ~ 16자리</span>로 입력이 가능합니다.
+                                    </span>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="required">비밀번호 확인</th>
+                                <td><input type="password" name="check_pw" id="check_pw" required></td>
+                            </tr>
+                            <tr>
+                                <th class="required">이메일</th>
+                                <td>
+                                    <input type="text" name="mail" id="mail">
+                                    <span>@</span>
+                                    <input type="text" name="e_mail" id="e_mail">
+            
+                                    <select id="e_mail" name="e_mail" size="1">
+                                        <option selected>직접입력</option>
+                                        <option value="naver.com">naver.com</option>
+                                        <option value="daum.net">daum.net</option>
+                                        <option value="google.com">google.com</option>
+                                        <option value="icloud.com">icloud.com</option>
+                                    </select>
+                                    <button type="button" name="check_mail" class="check">이메일 중복확인</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>학년/반</th>
+                                <td>
+                                    <div>
+                                        <select id="grad" name="grad" size="1">
+                                            <option selected disabled>선택</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option> 
+                                        </select>
+                                        학년
+                                        <select id="class" name="class" size="1">
+                                            <option selected disabled>선택</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                        반
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="btn">
+                        <button type="reset" class="final_btn">초기화</button> 
+                        <button type="submit" class="final_btn">회원가입</button> 
+                    </div>
+                    <hr />
+                </form>
+            </div>
+            
+        </main>
+    
+    <footer>
+        <p>
+            상호: ㅇㅇㅇ | 대표: ㅇㅇㅇ | 개인정보관리책임자: ㅇㅇㅇ |
+            전화: <a href="tel:00000000000">000-0000-0000</a> |
+            이메일 : <a href="mailto:master@example.com">master@example.com</a>
+            <br />
+            주소: ㅇㅇㅇ ㅇㅇㅇ ㅇㅇㅇ | 사업자등록번호: 000-00-00000 |
+        </p>
+        <p>
+            <a href="#">사업자정보확인</a> | <a href="#">홈페이지 이용약관</a> | <a href="#">개인정보처리방침</a>
+            <br />
+            © copyright 2024 CHOI Inkyu.
+        </p>
+    </footer>
+</body>
+</html>
