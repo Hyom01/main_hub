@@ -1,0 +1,120 @@
+ <Nav tabs>
+          <NavItem>
+            <NavLink
+              onClick={() => {
+                this.toggle("Tshirts");
+              }}
+            >
+              {" "}
+              First Tab{" "}
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink
+              onClick={() => {
+                this.toggle("Pants");
+              }}
+            >
+              {" "}
+              Sceond Tab{" "}
+            </NavLink>
+          </NavItem>
+        </Nav>
+        <TabContent activeTab={this.state.TabState}>
+          <TabPane tabId="Tshirts">
+            {/* <h1>Tshirts</h1> */}
+            <TermProject_copy />
+          </TabPane>
+          <TabPane tabId="Pants">
+            {/* Pants */}
+            <TermProject />
+          </TabPane>
+        </TabContent>
+
+
+
+        ///////////
+        import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+
+// 첫 번째 화면 컴포넌트
+class Home extends React.Component {
+  render() {
+    return (
+      <div>
+        <h2>홈 화면</h2>
+        <Link to="/other">다른 화면으로 이동</Link>
+      </div>
+    );
+  }
+}
+
+// 두 번째 화면 컴포넌트
+class OtherComponent extends React.Component {
+  render() {
+    return <h2>다른 화면</h2>;
+  }
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/other" component={OtherComponent} />
+        </Switch>
+      </Router>
+    );
+  }
+}
+
+export default App;
+
+
+/////////////
+import "./App.css";
+import React from "react";
+import TermProject from "./03/TermProject";
+import Login from "./Login";
+
+// import "bootstrap/dist/css/bootstrap.css";
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0,
+    };
+  }
+
+  IncreaseCount = () => {
+    this.setState((prevState) => ({
+      count: prevState.count + 1,
+    }));
+  };
+  DecreaseCount = () => {
+    this.setState((prevState) => ({
+      count: (this.state.count = 0),
+    }));
+  };
+
+  render() {
+    return (
+      <div>
+        <TermProject
+          count={this.state.count}
+          IncreaseCount={this.IncreaseCount}
+          DecreaseCount={this.DecreaseCount}
+        />
+      </div>
+    );
+  } //render()
+}
+
+export default App;
+
+
+
+///////////
+<span className='message-container'>{this.props.info}</span> <button onClick={this.onLogout}>Logout</button>     
