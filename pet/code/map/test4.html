@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로딩 중 화면 예제</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+<!-- 로딩 중 화면 -->
+<div id="mask" style="position:absolute; z-index:9000; background-color:#000000; display:none; left:0; top:0;"></div>
+<div id="loadingImg" style="position: absolute; display: block; margin: 0px auto;"></div>
+
+<!-- <a> 태그를 사용하여 다음 화면으로 이동 -->
+<a href="result2.jsp?index1=<%=survey[1]%>&index2=<%=survey[2]%>&index3=<%=survey[3]%>&index4=<%=survey[4]%>&index5=<%=survey[5]%>&index6=<%=survey[6]%>&index7=<%=survey[7]%>&index8=<%=survey[8]%>&index9=<%=survey[9]%>&index10=<%=survey[10]%>&index11=<%=survey[11]%>&index12=<%=survey[12]%>&index13=<%=survey[13]%>&index14=<%=survey[14]%>&index15=<%=survey[15]%>&index16=<%=survey[16]%>&index17=<%=survey[17]%>&index18=<%=survey[18]%>&index19=<%=survey[19]%>&index20=<%=survey[20]%>&index21=<%=survey[21]%>&index22=<%=survey[22]%>&index23=<%=survey[23]%>&index24=<%=survey[24]%>&index25=<%=survey[25]%>&index26=<%=survey[26]%>&index27=<%=survey[27]%>&index28=<%=survey[28]%>&index29=<%=survey[29]%>&index30=<%=survey[30]%>&index31=<%=survey[31]%>&index32=<%=survey[32]%>&index33=<%=survey[33]%>"
+class="submit-button" onclick="return showAlertAndLoading()">제출</a>
+
+<script>
+    function showAlertAndLoading() {
+        // 간단한 경고 메시지 표시
+        var userConfirmation = confirm('제출 하시겠습니까?');
+        
+        if (userConfirmation) {
+            // 사용자가 확인하면 로딩 중 화면 표시
+            LoadingWithMask('./spinner-1s-200px.gif');
+            
+            // 3초 후에 로딩 중 화면 숨기기
+            setTimeout(function () {
+                closeLoadingWithMask();
+                // 여기에 다음 화면으로 이동하는 코드를 추가하지 않아도 됩니다.
+            }, 3000);
+        }
+
+        // confirm 창에서 사용자가 '취소'를 선택하면 false를 반환하여 링크 이동을 중단합니다.
+        return userConfirmation;
+    }
+
+    function LoadingWithMask(gif) {
+        var maskHeight = $(document).height();
+        var maskWidth = window.document.body.clientWidth;
+        var mask = "<div id='mask' style='position:absolute; z-index:9000; background-color:#000000; display:none; left:0; top:0;'></div>";
+        var loadingImg = "<img src='" + gif + "' style='position: absolute; display: block; margin: 0px auto;'/>";
+        
+        $('body').append(mask);
+        $('#mask').css({'width' : maskWidth,'height': maskHeight,'opacity' : '0.3'});
+        $('#mask').show();
+        $('#loadingImg').append(loadingImg);
+        $('#loadingImg').show();
+    }
+
+    function closeLoadingWithMask() {
+        $('#mask, #loadingImg').hide();
+        $('#mask, #loadingImg').empty();
+    }
+</script>
+
+</body>
+</html>

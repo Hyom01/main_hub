@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모달 창 예제</title>
+
+    <link href="./bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="./test.css" rel="stylesheet">
+    <link rel="stylesheet" href="./contact-input-style.css">
+    <link rel="stylesheet" href="./hover-effect.css">
+    <link rel="stylesheet" type="text/css" href="./font-awesome.min.css" />
+</head>
+<body>
+  <nav class="navbar navbar-default top-bar affix" data-spy="affix" data-offset-top="250" >
+    <div class="container" >
+        <div class="navbar-header page-scroll">
+            <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a href="./main.html" class="navbar-brand">동물 발자국</a>
+          </div>
+          <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                  <li ><a href="login/test.html">로그인</a></li>
+                  <li><a href="#about">설문하러 가기</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  <section class="feature-section" id="features">
+    <div class="container">
+    <h2 class="text-center">더보기</h2>
+    <p class="text-center sub-text">강아지</p>
+    <div class="row">
+        <div class="col-md-6 img-sec left-effect"><img class="img-responsive" src="img/info-bg-01.jpg">
+          <button id="openModalBtn" class="btn">모달 열기</button>
+        </div>      
+           <div class="col-md-6 right-effect"><div class="content-box"><h3>이름: 모모<br> 성별: 남아 <br> 나이: 2023년 3월생 <br> 히스테리: 없음 </p>
+        </div>
+    </div>
+</section>
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <p>지도가 들어갈 예정</p>
+        </div>
+    </div>
+
+    <script src="./test.js"></script>
+</body>
+</html>

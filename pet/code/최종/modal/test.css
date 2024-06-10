@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body,html{width:100%; height:100%}
+
+body {
+  color: #5a5a5a;
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
+a, a:hover, .btn{outline:none!important;}
+
+.row{
+	margin-right:0;
+	margin-left:0;
+  margin-top: 100px;
+	}
+.row > [class^="col-"],
+.row > [class*=" col-"] {
+	
+	padding-right:0px;
+	padding-left:0px;
+}
+
+.no-padding{
+	padding-left:0; padding-right:0;
+}
+section{padding:75px 0 100px;}
+.btn-capsul{border-radius:25px; padding-left:25px; padding-right:25px;}
+.btn-submit {background: #5cb85c none repeat scroll 0 0; color: #000; font-size: 20px; margin-top: 20px; padding: 7px 40px;}
+.btn-submit:hover {background:#3b8f3b; color:#000}
+
+ 
+/*-------------- Top Header --------------*/  
+.navbar-default {
+    background-color: transparent;
+    border: medium none;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 24px 0;
+    position:absolute;
+	top:0;
+    width: 100%;
+}
+.affix {
+    animation: 1s ease 0s normal both 1 running slideInDown;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 0 8px 0 rgba(88, 88, 88, 0.19);
+    padding: 0.75em 0;
+    position: fixed;
+    z-index: 1000;
+}
+
+.navbar-default .navbar-nav li a {color:#fff;font-size:16px; font-weight:600}
+.navbar-default.affix .navbar-nav li a {color:#7ac142;}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav li a:hover, .navbar-default .navbar-nav li a:focus{background:none; color:#7ac142;}
+
+.navbar-default a.navbar-brand{color:#7ac142; font-size:30px; font-weight:600}
+/*.navbar-default a.navbar-brand:hover{color:#7ac142;}*/
+.navbar-default a.navbar-brand.dark{color:#7ac142;}
+.color-bg-nav{background:#7ac142; margin-top:0; padding:5px 0}
+
+/*feature 섹션*/
+.feature-section{float:left; width:100%; background:#fff;}
+.feature-section h2{font-size:38px; font-weight:bold; color:#0b5679;}
+.feature-section h3 {font-size: 33px; font-weight: 500; margin: 70px 0 20px;}
+.feature-section p.sub-text{font-size:18px; margin-left:3px;}
+.feature-section p{font-size:18px; margin:15px 0; line-height:30px; margin-left:3px;}
+.feature-section i{margin-left:5px;}
+.feature-section a{margin-top:20px; color:#0b5679; font-size:16px; margin-left:4px;}
+.feature-section .content-box{padding:0px 20px; }
+.feature-section .container > .row{padding:50px 0; border-bottom:1px dashed #efefef}
+.feature-section .container > .row:last-child{padding:50px 0 0; border-bottom:none}
+.feature-section .img-sec{padding:0 20px}
+
+@media (min-width: 768px) {
+    .featurette-heading {
+        font-size: 50px;
+      }
+}
+
+@media (min-width: 992px) {
+    .featurette-heading {
+      margin-top: 120px;
+    }
+  }
+
+@media (max-width: 460px){
+	p, .feature-section h3{text-align:center;}
+	.feature-section a{float:left; width:100%; text-align:center; margin-top:0;}
+	.f-small-block .small-inner{padding:0 20px}
+}
+
+/*버튼*/
+.btn{outline:none!important;}
+.btn-capsul{border-radius:25px; padding-left:25px; padding-right:25px;}
+.btn-submit {background: #5cb85c none repeat scroll 0 0; color: #000; font-size: 20px; margin-top: 20px; padding: 7px 40px;}
+.btn-submit:hover {background:#3b8f3b; color:#000}
+.btn-search {background: #7ac142 none repeat scroll 0 0; border-radius: 25px; color: #000; font-size: 19px; height: 43px; padding: 0 35px; text-shadow: 1px 1px rgba(0, 0, 0, 0.5);}
+
+
+/* 스타일링을 위한 CSS */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 300px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.animal-image {
+  width: 400;
+  height: 500px;
+  object-fit: cover; /* 이미지가 지정한 크기에 맞게 조절되도록 함 */
+}

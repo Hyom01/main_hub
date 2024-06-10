@@ -1,0 +1,53 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+  background: #5CA4EA;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+input {
+  height: 1.8em;
+  width: 220px;
+  padding: 0 10px;
+  box-shadow: 3px 3px 10px #566270;
+  outline: none;
+  border: none;
+  color: #4F86C6;
+}
+
+::placeholder {
+	color: #84B1ED;
+}
+#recommend {
+	margin-top: 1px;
+	position: absolute;
+	background: white;
+	padding: 0 10px;
+}
+
+.item {
+	height: 1.8em;
+	width: 220px;
+	outline: none;
+}
+
+.item:hover {
+	color: #9baec8;
+}
+.text {
+	font-weight: bold;
+}
+.invisible {
+	display: none;
+}

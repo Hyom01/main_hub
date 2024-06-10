@@ -1,0 +1,352 @@
+@font-face {
+  font-family: 'JalnanGothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'alice';
+  src: url("https://font.elice.io/css?family=Elice+DX+Neolli");
+  font-weight: normal;
+  font-style: normal;
+}
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body,html{width:100%; height:100%}
+
+body {
+  color: #5a5a5a;
+  font-family: 'JalnanGothic';
+  /*margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;*/
+}
+a, .btn{
+  outline:none!important; 
+}
+li{ font-family: 'alice';}
+h4{ font-family: 'alice';}
+p{font-family: 'alice';}
+.btn{font-family: 'alice';}
+.navbar-default.affix .navbar-nav li a {color:#7ac142;}
+
+.row{
+	margin-right:0;
+	margin-left:0;
+  margin-top: 100px;
+	}
+.row > [class^="col-"],
+.row > [class*=" col-"] {
+	
+	padding-right:0px;
+	padding-left:0px;
+}
+
+.no-padding{
+	padding-left:0; padding-right:0;
+}
+section{padding:75px 0 100px;}
+.btn-capsul{border-radius:25px; padding-left:25px; padding-right:25px;}
+.btn-submit {background: #5cb85c none repeat scroll 0 0; color: #000; font-size: 20px; margin-top: 20px; padding: 7px 40px;}
+.btn-submit:hover {background:#3b8f3b; color:#000}
+
+ 
+/*-------------- Top Header --------------*/  
+.navbar-default {
+    background-color: transparent;
+    border: medium none;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 24px 0;
+    position:absolute;
+	top:0;
+    width: 100%;
+}
+.affix {
+    animation: 1s ease 0s normal both 1 running slideInDown;
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 0 8px 0 rgba(88, 88, 88, 0.19);
+    padding: 0.75em 0;
+    position: fixed;
+    z-index: 1000;
+}
+
+.navbar-default .navbar-nav{color:#fff;font-size:16px; font-weight:600}
+.navbar-default.affix .navbar-nav li a {color:#7ac142;}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active, .navbar-default .navbar-nav li, .navbar-default .navbar-nav li a:focus{background:none; color:#7ac142;}
+
+.navbar-default a.navbar-brand{color:#7ac142; font-size:30px; font-weight:600}
+/*.navbar-default a.navbar-brand:hover{color:#7ac142;}*/
+.navbar-default a.navbar-brand.dark{color:#7ac142;}
+.color-bg-nav{background:#7ac142; margin-top:0; padding:5px 0}
+
+/*-------------- Top Banner --------------*/  
+.banner-sec .jumbotron{background:none;text-align:center; color:#000; padding:50px;}
+.banner-sec .jumbotron p{font-size:19px;}
+.banner-sec h1{font-weight:700; text-transform:uppercase; margin-bottom:0}
+.banner-sec h2{font-weight:300; text-transform:uppercase; margin-bottom:40px; margin-top:10px; font-size:22px; }
+.banner-sec .input-group {margin-top: 20px; padding: 0 111px;}
+.banner-sec .form-control{border-radius: 25px; height: 43px;}
+.banner-sec .btn-search{background: #7ac142 none repeat scroll 0 0; border-radius: 25px; color: #000; font-size: 19px; height: 43px; padding: 0 35px; text-shadow: 1px 1px rgba(0, 0, 0, 0.5);}
+input[type='button']{background: #7ac142 none repeat scroll 0 0; border-radius: 25px; color: #000; font-size: 19px; height: 43px; padding: 0 35px; text-shadow: 1px 1px rgba(0, 0, 0, 0.5);}
+
+/* 숨겨진 요소를 초기에 숨김 */
+.options-container {
+    display: none;
+}
+
+/* 나타낼 때의 애니메이션 효과 */
+.show {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+
+  /*.navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }*/
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+  /* Navbar positioning foo */
+  
+
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+@media (max-width: 768px){
+  .banner-sec {height: 50vh;}
+  .banner-sec h1 {font-size: 30px;}
+  .banner-sec h2 {line-height: 36px; font-size:19px;}
+  .about-sec h2 { margin-bottom: 20px; text-align: center; font-size:38px}
+  .testimonial-sec h2, .contact-sec h2{font-size:38px; margin:0 0 30px}
+}
+
+@media (max-width: 460px){
+	.banner-sec .jumbotron{padding:30px 0;}
+	.banner-sec {height: 50vh;}
+	.banner-sec .input-group{display:none;}
+	p, .feature-section h3{text-align:center;}
+	.feature-section a{float:left; width:100%; text-align:center; margin-top:0;}
+	.f-small-block .small-inner{padding:0 20px}
+	
+}
+
+.animal-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* 이미지가 지정한 크기에 맞게 조절되도록 함 */
+}
+
+/*페이징*/
+.page_wrap {
+  text-align: center;
+  border-radius: 10px;
+}
+
+.page_nation {
+  display: inline-block;
+  margin-top: 10px; 
+}
+
+.page_nation ul {
+  /*list-style: none;*/
+  padding: 0;
+  border-radius: 10px;
+}
+
+.page_nation li {
+  display: inline-block;
+  margin-right: 5px; 
+}
+
+.page_nation a {
+  display: block;
+  padding: 8px 12px;
+  /*text-decoration: none;*/
+  background-color: #7ac142; 
+  color: white;
+  border-radius: 10px;
+  transition: white 0.3s ease; 
+}
+
+.page_nation a:hover {
+  background-color: #3b8f3b; 
+}
+
+.page_nation a.on {
+  background-color: #3b8f3b; 
+}
+
+.page_nation .pprev,
+.page_nation .nnext {
+  background-color: #7ac142; 
+  color: #333;
+  transition: white 0.3s ease; 
+  border-radius: 10px;
+}
+
+/*키워드 검색*/
+.search-container {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-box {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+}
+.search-button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*일열 만들기*/
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.filter-select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.btn-search {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*로그인-로그아웃, 마이페이지*/
+.dropdown-label{
+  font-size : 12px;
+  margin : 10px;
+  font-weight : bold;
+  color : rgb(50, 50, 50);
+}
+
+.dropdown{
+  position : relative;
+  display : inline-block;
+}
+
+.dropbtn_icon{
+  font-family : 'Material Icons';
+}
+
+.dropbtn{
+  display : block;
+  border : 2px solid rgb(94, 94, 94);
+  border-radius : 4px;
+  background-color: #fcfcfc;
+  font-weight: 400;
+  color : rgb(124, 124, 124);
+  padding : 12px;
+  width :240px;
+  text-align: left;
+  cursor : pointer;
+  font-size : 12px;
+  z-index :1;
+  position : relative;
+}
+
+.dropdown-content{
+  display : none;
+  font-weight: 400;
+  background-color: #fcfcfc;
+  min-width : 240px;
+  border-radius: 8px;
+  height : 90px;
+  box-shadow: 0px 0px 10px 3px rgba(190, 190, 190, 0.6);
+}
+.dropdown-content::-webkit-scrollbar{
+  width : 5px;
+  height : 10px;
+}
+.dropdown-content::-webkit-scrollbar-thumb{
+  border-radius : 2px;
+  background-color :rgb(194, 194, 194)
+}
+.dropdown-content div{
+  display : block;
+  text-decoration : none;
+  color : rgb(37, 37, 37);
+  font-size: 12px;
+  padding : 12px 20px;
+}
+.dropdown-content div:hover{
+  background-color: rgb(226, 226, 226);
+}
+.dropdown-content.show{
+  display : block;
+}
+.dropbtn_click{
+  font-family: Material Icons; 
+  font-size : 16px; 
+  color : #3b3b3b; 
+  float:right;
+}

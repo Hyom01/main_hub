@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kakao Maps Modal</title>
+</head>
+<body>
+ 
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=29fb7dc7fcffbf9a8141b119990cbd32"></script>
+
+<button onclick="openKakaoMapModal()">Open Kakao Map</button>
+<div id="kakaoMapModal" style="display: none;">
+    <div id="kakaoMap" style="width: 100%; height: 400px;"></div>
+    <span onclick="closeKakaoMapModal()">Close</span>
+</div>
+
+<script>
+    function openKakaoMapModal() {
+        document.getElementById('kakaoMapModal').style.display = 'block';
+
+        kakao.maps.load(function () {
+            var container = document.getElementById('kakaoMap');
+            var options = {
+                center: new kakao.maps.LatLng(37.5665, 126.9780), // 서울의 좌표
+                level: 3
+            };
+            var map = new kakao.maps.Map(container, options);
+        });
+    }
+
+    function closeKakaoMapModal() {
+        document.getElementById('kakaoMapModal').style.display = 'none';
+    }
+</script>
+
+    <!-- Your other scripts go here -->
+</body>
+</html>

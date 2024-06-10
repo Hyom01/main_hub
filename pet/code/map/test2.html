@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로딩 중 화면 예제</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+<!-- 로딩 중 화면 -->
+<div id="mask" style="position:absolute; z-index:9000; background-color:#000000; display:none; left:0; top:0;"></div>
+<div id="loadingImg" style="position: absolute; display: block; margin: 0px auto;"></div>
+
+<!-- 입력 요소 -->
+<input type="submit" class="submit-button" value="제출" onclick="showAlertAndLoading()">
+
+<script>
+    function showAlertAndLoading() {
+        // 간단한 경고 메시지 표시
+        var userConfirmation = confirm('제출 하시겠습니까?');
+        
+        if (userConfirmation) {
+            // 사용자가 확인하면 로딩 중 화면 표시
+            LoadingWithMask('./Spinner-1s-200px.gif');
+            
+            // 3초 후에 로딩 중 화면 숨기기
+            
+            setTimeout(function () {
+                closeLoadingWithMask();
+                // 여기에 다음 화면으로 이동하는 코드를 추가합니다.
+                window.location.href = 'https://www.naver.com/';
+            }, 3000);
+        }
+        
+    }
+
+    function LoadingWithMask(gif) {
+        var maskHeight = $(document).height();
+        var maskWidth = window.document.body.clientWidth;
+        var mask = "<div id='mask' style='position:absolute; z-index:9000; background-color:#000000; display:none; left:0; top:0;'></div>";
+        var loadingImg = "<img src='" + gif + "' style='position: absolute; display: block; margin: 0px auto;'/>";
+        
+        $('body').append(mask);
+        $('#mask').css({'width' : maskWidth,'height': maskHeight,'opacity' : '0.3'});
+        $('#mask').show();
+        $('#loadingImg').append(loadingImg);
+        $('#loadingImg').show();
+    }
+
+    function closeLoadingWithMask() {
+        $('#mask, #loadingImg').hide();
+        $('#mask, #loadingImg').empty();
+    }
+</script>
+
+</body>
+</html>

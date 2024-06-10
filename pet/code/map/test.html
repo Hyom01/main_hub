@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>설문조사 제출</title>
+</head>
+<body>
+    <button id="submitForm">제출하기</button>
+
+    <script>
+        function submitForm() {
+            // 여기에 설문조사 제출 로직을 추가합니다.
+            alert('설문조사가 제출되었습니다.');
+            window.location.href = 'https://www.naver.com/';
+        }
+
+        // 올바른 id('submitForm')를 사용합니다.
+        document.getElementById('submitForm').addEventListener('click', submitForm);
+    </script>
+</body>
+</html>
